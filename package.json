@@ -1,0 +1,30 @@
+{
+  "name": "Microsoft Teams",
+  "version": "1.0.0",
+  "description": "Microsoft Teams - Electron App",
+  "main": "main.js",
+  "repository": "https://github.com/jseifeddine/microsoft-teams-electron.git",
+  "author": "Jad Seifeddine <jseifeddine@macquarietelecom.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  },
+  "devDependencies": {
+    "electron": "^20.3.12",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1",
+    "eslint": "^8.48.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/teams.png --prune=true --out=dist",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=arm64,x64 --icon=assets/teams.png --prune=true --out=dist",
+    "build": "electron-builder --linux deb tar.xz",
+    "build-mac": "electron-builder --mac"
+  }
+}

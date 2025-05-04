@@ -1,0 +1,8 @@
+appId: me.ionutachim.${name}
+productName: "Microsoft Teams"
+linux:
+  icon: assets/icons/png
+mac:
+  icon: assets/icons/png
+  category: public.app-category.productivity
+  darkModeSupport: true
